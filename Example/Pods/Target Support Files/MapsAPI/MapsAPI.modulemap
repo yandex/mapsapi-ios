@@ -1,0 +1,6 @@
+framework module MapsAPI {
+  umbrella header "MapsAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}

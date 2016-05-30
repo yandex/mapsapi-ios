@@ -1,0 +1,6 @@
+framework module cordova_plugin_device {
+  umbrella header "cordova-plugin-device-umbrella.h"
+
+  export *
+  module * { export * }
+}

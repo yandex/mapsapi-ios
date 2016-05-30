@@ -1,0 +1,6 @@
+framework module cordova_plugin_globalization {
+  umbrella header "cordova-plugin-globalization-umbrella.h"
+
+  export *
+  module * { export * }
+}

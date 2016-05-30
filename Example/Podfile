@@ -1,3 +1,5 @@
+platform :ios, '9.0'
+
 use_frameworks!
 
 target 'MapsAPI_Example' do
@@ -7,6 +9,6 @@ target 'MapsAPI_Example' do
     inherit! :search_paths
 
     pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
+    pod 'Nimble', '~> 3.0'
   end
 end

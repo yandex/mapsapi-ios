@@ -1,0 +1,6 @@
+framework module cordova_plugin_device_motion {
+  umbrella header "cordova-plugin-device-motion-umbrella.h"
+
+  export *
+  module * { export * }
+}

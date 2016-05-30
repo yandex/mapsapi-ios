@@ -1,0 +1,60 @@
+PODS:
+  - Cordova (4.0.1)
+  - cordova-plugin-device (1.1.1):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-device-motion (1.2.0):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-device-orientation (1.0.2):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-geolocation (2.1.0):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-globalization (1.0.2):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-network-information (1.2.0):
+    - Cordova (>= 4.0.1)
+  - cordova-plugin-wkwebview-engine (1.0.2):
+    - Cordova (>= 4.0.1)
+  - CordovaPlugin-console (0.2.10):
+    - Cordova (>= 3.0.0)
+  - MapsAPI (0.1.0):
+    - Cordova
+    - cordova-plugin-device
+    - cordova-plugin-device-motion
+    - cordova-plugin-device-orientation
+    - cordova-plugin-geolocation
+    - cordova-plugin-globalization
+    - cordova-plugin-network-information
+    - cordova-plugin-wkwebview-engine
+    - CordovaPlugin-console
+    - phonegap-ios-template
+  - Nimble (3.2.0)
+  - phonegap-ios-template (0.2.0)
+  - Quick (0.9.2)
+
+DEPENDENCIES:
+  - MapsAPI (from `../`)
+  - Nimble (~> 3.0)
+  - Quick (~> 0.8)
+
+EXTERNAL SOURCES:
+  MapsAPI:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Cordova: a83108a483fe01d06ecabb9d83bdbf773cb8b22c
+  cordova-plugin-device: 3412e6b48e329996ba17c845cdd25cb9ac0af7e2
+  cordova-plugin-device-motion: 30503b3ba3092dbccdca9dc34f9d4ec851bf3e80
+  cordova-plugin-device-orientation: 687a72efac2398955ed256d856dc822850a69edb
+  cordova-plugin-geolocation: 05450762ef68612bf857b61c36877b21c1266420
+  cordova-plugin-globalization: bd6ba379dfef19c46d905fa2fe75be64e247e1a2
+  cordova-plugin-network-information: eb6d5b97e395f9c0199cae2128319c054753f3ea
+  cordova-plugin-wkwebview-engine: d07b627d9d0cfcc4276671cddb3bb7b6a842e67c
+  CordovaPlugin-console: aeb6015a9830edaaf8158a6b49f18189ebf38aa5
+  MapsAPI: 9dbfcacf6c2a0eb800db0cd2e52b0656c094ea34
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  phonegap-ios-template: 4fb2cba38c3272d01e3181d77af6218f70da7855
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+
+PODFILE CHECKSUM: 085839f980578cd6a577fa75ef9c850e083383f9
+
+COCOAPODS: 1.0.0

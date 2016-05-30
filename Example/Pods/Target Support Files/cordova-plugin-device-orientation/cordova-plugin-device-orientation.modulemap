@@ -1,0 +1,6 @@
+framework module cordova_plugin_device_orientation {
+  umbrella header "cordova-plugin-device-orientation-umbrella.h"
+
+  export *
+  module * { export * }
+}

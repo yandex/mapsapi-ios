@@ -1,0 +1,6 @@
+framework module cordova_plugin_wkwebview_engine {
+  umbrella header "cordova-plugin-wkwebview-engine-umbrella.h"
+
+  export *
+  module * { export * }
+}

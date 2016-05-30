@@ -1,0 +1,6 @@
+framework module CordovaPlugin_console {
+  umbrella header "CordovaPlugin-console-umbrella.h"
+
+  export *
+  module * { export * }
+}

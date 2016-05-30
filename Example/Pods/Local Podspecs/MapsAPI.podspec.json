@@ -1,0 +1,55 @@
+{
+  "name": "MapsAPI",
+  "version": "0.1.0",
+  "summary": "Framework to add Yandex Maps API via WebView",
+  "description": "Framework to add Yandex Maps API in WebView.",
+  "homepage": "https://github.com/Ajaxy/mapsapi-ios",
+  "license": {
+    "type": "MPL",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ajaxy": "alexander@zinchuk.com"
+  },
+  "source": {
+    "git": "https://github.com/Ajaxy/mapsapi-ios.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "MapsAPI/Classes/**/*",
+  "resources": "resources/*",
+  "dependencies": {
+    "Cordova": [
+
+    ],
+    "CordovaPlugin-console": [
+
+    ],
+    "cordova-plugin-device": [
+
+    ],
+    "cordova-plugin-device-orientation": [
+
+    ],
+    "cordova-plugin-device-motion": [
+
+    ],
+    "cordova-plugin-globalization": [
+
+    ],
+    "cordova-plugin-geolocation": [
+
+    ],
+    "cordova-plugin-network-information": [
+
+    ],
+    "cordova-plugin-wkwebview-engine": [
+
+    ],
+    "phonegap-ios-template": [
+
+    ]
+  }
+}

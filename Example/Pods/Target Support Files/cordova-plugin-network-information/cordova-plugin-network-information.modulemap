@@ -1,0 +1,6 @@
+framework module cordova_plugin_network_information {
+  umbrella header "cordova-plugin-network-information-umbrella.h"
+
+  export *
+  module * { export * }
+}

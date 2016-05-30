@@ -1,0 +1,6 @@
+framework module cordova_plugin_geolocation {
+  umbrella header "cordova-plugin-geolocation-umbrella.h"
+
+  export *
+  module * { export * }
+}
