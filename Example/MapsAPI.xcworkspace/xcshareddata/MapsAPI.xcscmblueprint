@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C879272E0456FE1A2654D2C7C16E3274A63FE0CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C879272E0456FE1A2654D2C7C16E3274A63FE0CB" : 0,
+    "83A3CB68C4A17054FEE4AA334D0BB6324C1B3107" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "24EC5DB2-4390-406F-8394-4D98F9E7B9E5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C879272E0456FE1A2654D2C7C16E3274A63FE0CB" : "mapsapi-ios\/",
+    "83A3CB68C4A17054FEE4AA334D0BB6324C1B3107" : "phonegap-webview-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MapsAPI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/MapsAPI.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/phonegap\/phonegap-webview-ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "83A3CB68C4A17054FEE4AA334D0BB6324C1B3107"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Ajaxy\/mapsapi-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C879272E0456FE1A2654D2C7C16E3274A63FE0CB"
+    }
+  ]
+}

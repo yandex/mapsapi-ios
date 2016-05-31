@@ -79,14 +79,6 @@ EOM
       ;;
   esac
 }
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "phonegap-ios-template/resources/config.xml"
-  install_resource "phonegap-ios-template/resources/www"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "phonegap-ios-template/resources/config.xml"
-  install_resource "phonegap-ios-template/resources/www"
-fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

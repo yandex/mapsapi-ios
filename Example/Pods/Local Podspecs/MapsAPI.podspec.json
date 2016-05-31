@@ -19,7 +19,7 @@
     "ios": "9.0"
   },
   "source_files": "MapsAPI/Classes/**/*",
-  "resources": "resources/*",
+  "resources": "MapsAPI/CordovaResources/*",
   "dependencies": {
     "Cordova": [
 
@@ -46,9 +46,6 @@
 
     ],
     "cordova-plugin-wkwebview-engine": [
-
-    ],
-    "phonegap-ios-template": [
 
     ]
   }

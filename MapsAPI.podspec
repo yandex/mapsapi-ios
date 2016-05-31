@@ -17,7 +17,7 @@ Framework to add Yandex Maps API in WebView.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'MapsAPI/Classes/**/*'
-  s.resources    = 'resources/*'
+  s.resources    = 'MapsAPI/CordovaResources/*'
 
   # s.resource_bundles = {
   #   'MapsAPI' => ['MapsAPI/Assets/*.png']
@@ -35,6 +35,4 @@ Framework to add Yandex Maps API in WebView.
   s.dependency 'cordova-plugin-geolocation'
   s.dependency 'cordova-plugin-network-information'
   s.dependency 'cordova-plugin-wkwebview-engine'
-
-  s.dependency 'phonegap-ios-template'
 end

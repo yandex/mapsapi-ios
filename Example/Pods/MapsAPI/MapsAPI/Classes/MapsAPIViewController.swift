@@ -9,9 +9,4 @@
 import Cordova
 
 public class MapsAPIViewController: CDVViewController {
-    override public func viewDidLoad() {
-        self.wwwFolderName = "Frameworks/MapsAPI.framework/www"
-        
-        super.viewDidLoad()
-    }
 }
