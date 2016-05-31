@@ -1,5 +1,5 @@
 PODS:
-  - Cordova (4.0.1)
+  - Cordova (4.1.1)
   - cordova-plugin-device (1.1.1):
     - Cordova (>= 4.0.1)
   - cordova-plugin-device-motion (1.2.0):
@@ -30,16 +30,19 @@ PODS:
   - Quick (0.9.2)
 
 DEPENDENCIES:
+  - Cordova (from `Cordova.podspec.json`)
   - MapsAPI (from `../`)
   - Nimble (~> 3.0)
   - Quick (~> 0.8)
 
 EXTERNAL SOURCES:
+  Cordova:
+    :podspec: Cordova.podspec.json
   MapsAPI:
     :path: ../
 
 SPEC CHECKSUMS:
-  Cordova: a83108a483fe01d06ecabb9d83bdbf773cb8b22c
+  Cordova: 9e3e474dc62b9de3ae497093fc7f66157917be74
   cordova-plugin-device: 3412e6b48e329996ba17c845cdd25cb9ac0af7e2
   cordova-plugin-device-motion: 30503b3ba3092dbccdca9dc34f9d4ec851bf3e80
   cordova-plugin-device-orientation: 687a72efac2398955ed256d856dc822850a69edb
@@ -52,6 +55,6 @@ SPEC CHECKSUMS:
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
 
-PODFILE CHECKSUM: 085839f980578cd6a577fa75ef9c850e083383f9
+PODFILE CHECKSUM: 9beead6cea6e2ea17c45d2d2c3bb63a09a79c8e3
 
 COCOAPODS: 1.0.0

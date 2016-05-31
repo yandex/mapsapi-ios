@@ -1894,17 +1894,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					661EC5A0ACD23B6705CB0768A4623A48 = {
-						DevelopmentTeam = 5RPH263W6X;
-					};
-					D0904228E61EA227306D71A0EC9F8AC2 = {
-						DevelopmentTeam = 5RPH263W6X;
-					};
-					FF61C7C740C1B196A3B33F37B77DBC68 = {
-						DevelopmentTeam = 5RPH263W6X;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2718,7 +2707,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1E07AF03429165C360B8DC40A28F120 /* Cordova.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2736,7 +2724,6 @@
 				MODULEMAP_FILE = "Target Support Files/Cordova/Cordova.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Cordova;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2778,7 +2765,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1E07AF03429165C360B8DC40A28F120 /* Cordova.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -2796,7 +2782,6 @@
 				MODULEMAP_FILE = "Target Support Files/Cordova/Cordova.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Cordova;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2809,7 +2794,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED67D1E8367A25AEAAFC9FB04F5EB051 /* Quick.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2827,7 +2811,6 @@
 				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Quick;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2874,7 +2857,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED67D1E8367A25AEAAFC9FB04F5EB051 /* Quick.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -2892,7 +2874,6 @@
 				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Quick;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3007,7 +2988,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CFE089D92382F269416F814AE315CDB /* Nimble.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3025,7 +3005,6 @@
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Nimble;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3183,7 +3162,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CFE089D92382F269416F814AE315CDB /* Nimble.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -3201,7 +3179,6 @@
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Nimble;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

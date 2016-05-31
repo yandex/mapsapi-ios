@@ -3,7 +3,8 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'MapsAPI_Example' do
-  pod 'MapsAPI', :path => '../'
+  pod 'Cordova', podspec: 'Cordova.podspec.json'
+  pod 'MapsAPI', path: '../'
 
   target 'MapsAPI_Tests' do
     inherit! :search_paths
