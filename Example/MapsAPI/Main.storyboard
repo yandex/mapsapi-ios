@@ -42,11 +42,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWM-Eg-VVk">
+                                <rect key="frame" x="266" y="402" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OWM-Eg-VVk" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="J3a-gM-ZW4"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="n2h-cu-GUS"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="OWM-Eg-VVk" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ubo-J3-Xgf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tune" image="BarIconSettings" id="cPa-gy-q4n"/>
