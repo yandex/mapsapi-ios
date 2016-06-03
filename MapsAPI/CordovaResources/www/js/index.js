@@ -1,36 +1,32 @@
-ymaps.ready(['layer.tileContainer.CanvasContainer', 'map.metaOptions']).then(function (ym) {
+ymaps.ready(['map.metaOptions']).then(function (ym) {
+                                                                             
     ymaps.map.metaOptions.set('groundPaneViewportMargin', 600);
                                                                              
     var map = window.myMap = new ym.Map('map', {
-            center: [55.74524234796502,37.586730756347656],
+            center: [55.74524234796502, 37.586730756347656],
             zoom: 12,
             controls: []
         }, {
-            searchControlProvider: 'yandex#search',
-                                        
             layerTilePositionEngine: 'css3-3d',
-            layerTileAnimateOpacity: false,
-            avoidFractionalZoom: true,
-            layerWebglEnabled: false,
             dragInertiaDuration: 'auto',
-            dragInertiaMinDistance: 0
+            dragInertiaMinDistance: 0,
+//            layerTileAnimateOpacity: false,
+//            avoidFractionalZoom: true,
+//            layerWebglEnabled: false,
         }),
         geoObject = new ym.Placemark(map.getCenter(), {
-            iconContent: 'mapsapi-ios',
-            balloonContent: 'FUCK YEAH.',
-            hintContent: 'omg!'
+            iconContent: 'Go here',
+            balloonContent: 'Lorem ipsum dolor sit amet'
         }, {
-            draggable: true,
             preset: 'islands#redStretchyIcon'
         });
 
-    map.controls.options.set('margin', 20);
     map.geoObjects.add(geoObject);
 
     setupControls(map);
 
-}, function (err) {
-	alert('Error: ' + err);
+}).fail(function (err) {
+    console.err(err);
 });
 
 function setupControls (map) {
