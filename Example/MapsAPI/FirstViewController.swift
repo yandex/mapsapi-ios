@@ -9,7 +9,9 @@
 import UIKit
 import MapsAPI
 
-class FirstViewController: MapsAPIViewController {
-
+class FirstViewController: MapsAPIViewController {    
+    override public func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 

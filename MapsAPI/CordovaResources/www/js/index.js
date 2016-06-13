@@ -10,9 +10,10 @@ ymaps.ready(['map.metaOptions']).then(function (ym) {
             layerTilePositionEngine: 'css3-3d',
             dragInertiaDuration: 'auto',
             dragInertiaMinDistance: 0,
-//            layerTileAnimateOpacity: false,
-//            avoidFractionalZoom: true,
-//            layerWebglEnabled: false,
+                                        
+            layerTileAnimateOpacity: false,
+            avoidFractionalZoom: false,
+            layerWebglEnabled: false,
         }),
         geoObject = new ym.Placemark(map.getCenter(), {
             iconContent: 'Go here',
@@ -37,22 +38,22 @@ function setupControls (map) {
                 itemSelectableLayout: 'round#listBoxItemSelectableLayout',
                 position: {
                     right: 20,
-                    bottom: 375
+                    bottom: 326
                 }
             }
         }),
-        geolocationControl = new ymaps.control.GeolocationControl({ options: {
-            layout: 'round#buttonLayout',
-            position: {
-                right: 20,
-                bottom: 312
-            }
-        }}),
         zoomControl = new ymaps.control.ZoomControl({ options: {
             layout: 'round#zoomLayout',
             position: {
                 right: 20,
-                bottom: 200
+                bottom: 216
+            }
+        }}),
+        geolocationControl = new ymaps.control.GeolocationControl({ options: {
+            layout: 'round#buttonLayout',
+            position: {
+                right: 20,
+                bottom: 150
             }
         }});
 
