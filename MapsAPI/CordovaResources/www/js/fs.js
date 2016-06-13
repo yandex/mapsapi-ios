@@ -93,10 +93,9 @@ ymaps.modules.define('fs.cache', ['fs', 'vow'], function (provide, fs, vow) {
                 return (+new Date() - fileInfo.lastModifiedDate < cacheDuration) ?
                     fs.open(CACHE_DIR, name) :
                     download(url, name, mimeType);
-            })
-            .fail(function () {
+            }, function () {
                 return download(url, name, mimeType);
-            })
+            });
     }
 
     provide({
