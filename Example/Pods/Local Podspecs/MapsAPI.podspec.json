@@ -47,6 +47,9 @@
     ],
     "cordova-plugin-wkwebview-engine": [
 
+    ],
+    "cordova-plugin-file": [
+      "~> 4.2.0"
     ]
   }
 }

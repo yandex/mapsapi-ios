@@ -1,4 +1,4 @@
-ymaps.ready(['map.metaOptions']).then(function (ym) {
+ymaps.ready(['map.metaOptions', 'fs.cache']).then(function (ym) {
                                                                              
     ymaps.map.metaOptions.set('groundPaneViewportMargin', 600);
                                                                              
@@ -25,6 +25,7 @@ ymaps.ready(['map.metaOptions']).then(function (ym) {
     map.geoObjects.add(geoObject);
 
     setupControls(map);
+    testFs();
 
 }).fail(function (err) {
     console.err(err);
@@ -61,4 +62,12 @@ function setupControls (map) {
         .add(typeSelector)
         .add(geolocationControl)
         .add(zoomControl);
+}
+
+function testFs () {
+    ymaps.fs.cache.fetch('logo.png', 'https://yastatic.net/morda-logo/i/bender/logo.png', 'image/png')
+        .then(function (file) {
+            document.body.innerHTML = '<img src="' + file.toURL() + '" />';
+        })
+        .fail(console.error, console);
 }

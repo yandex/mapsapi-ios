@@ -35,5 +35,5 @@ Framework to add Yandex Maps API in WebView.
   s.dependency 'cordova-plugin-geolocation'
   s.dependency 'cordova-plugin-network-information'
   s.dependency 'cordova-plugin-wkwebview-engine'
-  s.dependency 'cordova-plugin-file'
+  s.dependency 'cordova-plugin-file', '~> 4.2.0'
 end
