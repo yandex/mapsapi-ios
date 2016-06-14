@@ -28,7 +28,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage
 
 ### Connector
-Is used to send and receive data in Swift/ObjC <-> JavaScript code.
+Is used to send and receive data in Swift/ObjC <-> JavaScript code. Coming soon.
 
 ### Additional parameters
 You can owerwrite params as follows:
