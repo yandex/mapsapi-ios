@@ -6,10 +6,6 @@ Allows to easily add Yandex Maps to your existing iOS project using [Yandex.Maps
 <img src="./docs/iphone5c.png" height="350" /> 
 <img src="./docs/ipad.png" height="350" />
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Installation
 
 MapsAPI is available through [CocoaPods](http://cocoapods.org). To install
@@ -26,6 +22,10 @@ pod 'MapsAPI'
 2. Copy the [myMap.js](defaults/myMap.js) to your target resources and use [JavaScript API](https://tech.yandex.com/maps/jsapi/) to modify it and operate with the map.
 
 > *Note.* You can add other controllers and `.js` files keeping convention of matching names for each pair. 
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
