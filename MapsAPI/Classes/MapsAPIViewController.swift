@@ -16,7 +16,7 @@ public class MapsAPIViewController: CDVViewController {
         case JSFileNotFound
     }
     
-    let apiLang: String = "ru-RU"
+    let apiLang: String = "ru_RU"
     
     lazy var jsFileName: String = {
         let controllerName = String(self.dynamicType).stringByReplacingOccurrencesOfString("ViewController", withString: "")
@@ -26,7 +26,7 @@ public class MapsAPIViewController: CDVViewController {
     
     override public func viewDidLoad() {
         try! testJsFile()
-        
+
         self.configFile = "Frameworks/MapsAPI.framework/config.xml"
         self.wwwFolderName = "Frameworks/MapsAPI.framework/www"
         self.startPage = "index.html?params=" + getParamsJson()
