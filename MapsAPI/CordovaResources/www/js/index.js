@@ -25,7 +25,7 @@ ymaps.ready(['map.metaOptions', 'fs.cache']).then(function (ym) {
     map.geoObjects.add(geoObject);
 
     setupControls(map);
-    testFs();
+//    testFs();
 
 }).fail(function (err) {
     console.err(err);
