@@ -54,7 +54,7 @@ Tile cache coming soon.
 
 ## Author
 
-Alexander Zinchuk, alexander@zinchuk.com
+Alexander Zinchuk, zinchuk@yandex-team.ru
 
 ## License
 
