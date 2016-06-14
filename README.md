@@ -1,5 +1,7 @@
 # MapsAPI
 
+Allows to add easily add Yandex Maps to your iOS project using [Yandex.Maps JavaScript API](https://tech.yandex.com/maps/jsapi/) with Cordova WebView.
+
 <img src="./docs/iphone5s.png" height="350" /> 
 <img src="./docs/iphone5c.png" height="350" /> 
 <img src="./docs/ipad.png" height="350" />
@@ -7,8 +9,6 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -18,6 +18,13 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "MapsAPI"
 ```
+
+## Usage
+
+1. Create class `MyMapController` inherited from `MapsAPIViewController` and add it to any place you want to put the map.
+2. Copy the [defaults/myMap.js](defaults/myMap.js) to your target resources and use [JavaScript API](https://tech.yandex.com/maps/jsapi/) to modify it and operate with map.
+
+> *Note.* You can add other controllers and `.js` files keeping convention of matching names for each pair. 
 
 ## Author
 
