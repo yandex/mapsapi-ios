@@ -2,9 +2,9 @@
 
 Allows to easily add Yandex Maps to your existing iOS project using [Yandex.Maps JavaScript API](https://tech.yandex.com/maps/jsapi/).
 
-<img src="./docs/iphone5s.png" height="350" /> 
-<img src="./docs/iphone5c.png" height="350" /> 
-<img src="./docs/ipad.png" height="350" />
+<img src="./docs/iphone5s.png" height="280" /> 
+<img src="./docs/iphone5c.png" height="280" /> 
+<img src="./docs/ipad.png" height="280" />
 
 ## Installation
 
