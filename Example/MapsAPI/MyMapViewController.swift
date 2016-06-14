@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  MyMapViewController.swift
 //  MapsAPISample
 //
 //  Created by Alexandr Zinchuk on 26.05.16.
@@ -9,7 +9,7 @@
 import UIKit
 import MapsAPI
 
-class FirstViewController: MapsAPIViewController {
+class MyMapViewController: MapsAPIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

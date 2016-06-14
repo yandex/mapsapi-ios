@@ -1,73 +1,20 @@
-ymaps.ready(['map.metaOptions', 'fs.cache']).then(function (ym) {
-                                                                             
-    ymaps.map.metaOptions.set('groundPaneViewportMargin', 600);
-                                                                             
-    var map = window.myMap = new ym.Map('map', {
-            center: [55.74524234796502, 37.586730756347656],
-            zoom: 12,
-            controls: []
-        }, {
-            layerTilePositionEngine: 'css3-3d',
-            dragInertiaDuration: 'auto',
-            dragInertiaMinDistance: 0,
-                                        
-            layerTileAnimateOpacity: false,
-            avoidFractionalZoom: false,
-            layerWebglEnabled: false,
-        }),
-        geoObject = new ym.Placemark(map.getCenter(), {
-            iconContent: 'Go here',
-            balloonContent: 'Lorem ipsum dolor sit amet'
-        }, {
-            preset: 'islands#redStretchyIcon'
-        });
+(function (global) {
+    var API_URL = 'https://api-maps.yandex.ru/2.1-dev/?lang={lang}';
 
-    map.geoObjects.add(geoObject);
+    var params = JSON.parse(decodeURIComponent(location.search.match(/[\?&]params=(.+?)(?:&|$)/)[1]));
+    
+    function insertScript (src, onLoad) {
+        var script = document.createElement('script');
+        script.setAttribute('src', src);
+        script.onload = onLoad;
+        document.head.appendChild(script);
+    }
 
-    setupControls(map);
-//    testFs();
+    function onApiLoad () {
+        insertScript('js/mapsapi-round-controls.js');
+        insertScript('js/fs.js');
+        insertScript(params.init_file);
+    }
 
-}).fail(function (err) {
-    console.err(err);
-});
-
-function setupControls (map) {
-    var typeSelector = new ymaps.control.TypeSelector({
-            options: {
-                layout: 'round#listBoxLayout',
-                itemLayout: 'round#listBoxItemLayout',
-                itemSelectableLayout: 'round#listBoxItemSelectableLayout',
-                position: {
-                    right: 20,
-                    bottom: 326
-                }
-            }
-        }),
-        zoomControl = new ymaps.control.ZoomControl({ options: {
-            layout: 'round#zoomLayout',
-            position: {
-                right: 20,
-                bottom: 216
-            }
-        }}),
-        geolocationControl = new ymaps.control.GeolocationControl({ options: {
-            layout: 'round#buttonLayout',
-            position: {
-                right: 20,
-                bottom: 150
-            }
-        }});
-
-    myMap.controls
-        .add(typeSelector)
-        .add(geolocationControl)
-        .add(zoomControl);
-}
-
-function testFs () {
-    ymaps.fs.cache.fetch('logo.png', 'https://yastatic.net/morda-logo/i/bender/logo.png', 'image/png')
-        .then(function (file) {
-            document.body.innerHTML = '<img src="' + file.toURL() + '" />';
-        })
-        .fail(console.error, console);
-}
+    insertScript(API_URL.replace('{lang}', params.api_lang), onApiLoad);
+})(window);

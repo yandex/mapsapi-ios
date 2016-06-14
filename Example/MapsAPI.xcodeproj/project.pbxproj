@@ -13,9 +13,10 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B219DBDA7D51DC98C3531547 /* Pods_MapsAPI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189FB707E1F1522CF974974A /* Pods_MapsAPI_Example.framework */; };
-		F7649BC01CFCEF9C00407D17 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7649BBE1CFCEF9C00407D17 /* FirstViewController.swift */; };
+		F7649BC01CFCEF9C00407D17 /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7649BBE1CFCEF9C00407D17 /* MyMapViewController.swift */; };
 		F7649BC11CFCEF9C00407D17 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7649BBF1CFCEF9C00407D17 /* SecondViewController.swift */; };
 		F7649BC31CFCEFBD00407D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7649BC21CFCEFBD00407D17 /* Main.storyboard */; };
+		F7A4CE371D1055CB00DB88D4 /* myMap.js in Resources */ = {isa = PBXBuildFile; fileRef = F7A4CE361D1055CB00DB88D4 /* myMap.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +46,10 @@
 		A6AAA994F1529F3554736CE4 /* Pods-MapsAPI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsAPI_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapsAPI_Tests/Pods-MapsAPI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B74750E26A16DC60850A3608 /* Pods-MapsAPI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsAPI_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapsAPI_Example/Pods-MapsAPI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D3471E24AE64168EAE81AC1A /* MapsAPI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MapsAPI.podspec; path = ../MapsAPI.podspec; sourceTree = "<group>"; };
-		F7649BBE1CFCEF9C00407D17 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		F7649BBE1CFCEF9C00407D17 /* MyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
 		F7649BBF1CFCEF9C00407D17 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F7649BC21CFCEFBD00407D17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F7A4CE361D1055CB00DB88D4 /* myMap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = myMap.js; path = ../../defaults/myMap.js; sourceTree = "<group>"; };
 		FECAE9A973130F13703F9FD0 /* Pods-MapsAPI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsAPI_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapsAPI_Example/Pods-MapsAPI_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +97,9 @@
 		607FACD21AFB9204008FA782 /* Example for MapsAPI */ = {
 			isa = PBXGroup;
 			children = (
+				F7A4CE361D1055CB00DB88D4 /* myMap.js */,
 				F7649BC21CFCEFBD00407D17 /* Main.storyboard */,
-				F7649BBE1CFCEF9C00407D17 /* FirstViewController.swift */,
+				F7649BBE1CFCEF9C00407D17 /* MyMapViewController.swift */,
 				F7649BBF1CFCEF9C00407D17 /* SecondViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -253,6 +256,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				F7649BC31CFCEFBD00407D17 /* Main.storyboard in Resources */,
+				F7A4CE371D1055CB00DB88D4 /* myMap.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7649BC11CFCEF9C00407D17 /* SecondViewController.swift in Sources */,
-				F7649BC01CFCEF9C00407D17 /* FirstViewController.swift in Sources */,
+				F7649BC01CFCEF9C00407D17 /* MyMapViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
