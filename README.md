@@ -38,7 +38,7 @@ class MyMapViewController: MapsAPIViewController {
         // Default: 'ru_RU'.
         self.apiLang = 'en_US'
         
-        // By default is taken from controller name. I.e. 'myMap' for MyMapViewController.
+        // By default is taken from view controller name. I.e. 'myMap' for MyMapViewController.
         self.initFileName = 'anotherFile'
     
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class MyMapViewController: MapsAPIViewController {
 ```
 
 ### Multiple maps
-You can add other controllers and `.js` files keeping convention of matching names for each pair.
+You can add other view controllers and `.js` files keeping convention of matching names for each pair.
 
 ### Offline
 Tile cache coming soon.
