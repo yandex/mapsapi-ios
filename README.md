@@ -1,6 +1,6 @@
 # MapsAPI
 
-Allows to easily add Yandex Maps to your iOS project using [Yandex.Maps JavaScript API](https://tech.yandex.com/maps/jsapi/) with Cordova WebView.
+Allows to easily add Yandex Maps to your existing iOS project using [Yandex.Maps JavaScript API](https://tech.yandex.com/maps/jsapi/) with Cordova WebView.
 
 <img src="./docs/iphone5s.png" height="350" /> 
 <img src="./docs/iphone5c.png" height="350" /> 
