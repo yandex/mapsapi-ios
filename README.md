@@ -1,8 +1,8 @@
 # MapsAPI
 
-<img src="./docs/iphone6_spacegrey_side2.png" height="350" /> 
-<img src="./docs/ipadair2_gold_landscape.png" height="350" /> 
-<img src="./docs/iphone5c_blue.png" height="350" />
+<img src="./docs/iphone5s.png" height="350" /> 
+<img src="./docs/iphone5c.png" height="350" /> 
+<img src="./docs/ipad.png" height="350" />
 
 ## Example
 
