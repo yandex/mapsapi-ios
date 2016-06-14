@@ -1,9 +1,8 @@
 # MapsAPI
 
-[![CI Status](http://img.shields.io/travis/Ajaxy/MapsAPI.svg?style=flat)](https://travis-ci.org/Ajaxy/MapsAPI)
-[![Version](https://img.shields.io/cocoapods/v/MapsAPI.svg?style=flat)](http://cocoapods.org/pods/MapsAPI)
-[![License](https://img.shields.io/cocoapods/l/MapsAPI.svg?style=flat)](http://cocoapods.org/pods/MapsAPI)
-[![Platform](https://img.shields.io/cocoapods/p/MapsAPI.svg?style=flat)](http://cocoapods.org/pods/MapsAPI)
+<img src="./docs/iphone6_spacegrey_side2.png" height="300" />
+<img src="./docs/ipadair2_gold_landscape.png" height="300" />
+<img src="./docs/iphone5c_blue.png" height="300" />
 
 ## Example
 
@@ -22,7 +21,7 @@ pod "MapsAPI"
 
 ## Author
 
-Ajaxy, alx.zinchuk@gmail.com
+Alexander Zinchuk, alexander@zinchuk.com
 
 ## License
 
