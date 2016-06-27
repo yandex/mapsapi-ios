@@ -17,6 +17,8 @@ public class MapsAPIViewController: CDVViewController {
     }
     
     let apiLang: String = "ru_RU"
+    let apiMode: String = "release"
+    let apiEnterprise: Bool = false
     
     lazy var jsFileName: String = {
         let controllerName = String(self.dynamicType).stringByReplacingOccurrencesOfString("ViewController", withString: "")
@@ -47,6 +49,8 @@ public class MapsAPIViewController: CDVViewController {
     private func getParamsJson() -> String {
         let params = [
             "api_lang": self.apiLang,
+            "api_mode": self.apiMode,
+            "api_enterprise": self.apiEnterprise,
             "init_file": "../../../" + self.jsFileName + ".js"
         ]
         
