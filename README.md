@@ -2,9 +2,9 @@
 
 Allows to easily add Yandex Maps to your existing iOS project using [Yandex.Maps JavaScript API](https://tech.yandex.com/maps/jsapi/).
 
-<img src="./docs/iphone5s.png" height="350" /> 
-<img src="./docs/iphone5c.png" height="350" /> 
-<img src="./docs/ipad.png" height="350" />
+<img src="./docs/iphone5s.png" height="280" /> 
+<img src="./docs/iphone5c.png" height="280" /> 
+<img src="./docs/ipad.png" height="280" />
 
 ## Installation
 
@@ -28,7 +28,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage
 
 ### Connector
-Is used to send and receive data in Swift/ObjC <-> JavaScript code.
+Is used to send and receive data in Swift/ObjC <-> JavaScript code. Coming soon.
 
 ### Additional parameters
 You can owerwrite params as follows:
@@ -37,6 +37,12 @@ class MyMapViewController: MapsAPIViewController {
     override func viewDidLoad() {
         // Default: 'ru_RU'.
         self.apiLang = 'en_US'
+        
+        // Default: 'release'.
+        self.apiMode = 'debug'
+        
+        // Default: false. See https://tech.yandex.com/maps/doc/jsapi/2.1/commercial/index-docpage/
+        self.apiEnterprise = true
         
         // By default is taken from view controller name. I.e. 'myMap' for MyMapViewController.
         self.initFileName = 'anotherFile'
@@ -54,7 +60,7 @@ Tile cache coming soon.
 
 ## Author
 
-Alexander Zinchuk, alexander@zinchuk.com
+Alexander Zinchuk, zinchuk@yandex-team.ru
 
 ## License
 

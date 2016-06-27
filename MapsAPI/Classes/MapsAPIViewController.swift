@@ -8,7 +8,7 @@
 
 import Cordova
 
-// Workaound for http://stackoverflow.com/questions/25538995/cant-load-uiviewcontroller-xib-file-in-storyboard-in-swift?lq=1
+// Workaround for http://stackoverflow.com/questions/25538995/cant-load-uiviewcontroller-xib-file-in-storyboard-in-swift?lq=1
 @objc(MapsAPIViewController)
 
 public class MapsAPIViewController: CDVViewController {
