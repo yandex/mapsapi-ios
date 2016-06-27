@@ -38,6 +38,12 @@ class MyMapViewController: MapsAPIViewController {
         // Default: 'ru_RU'.
         self.apiLang = 'en_US'
         
+        // Default: 'release'.
+        self.apiMode = 'debug'
+        
+        // Default: false. See https://tech.yandex.com/maps/doc/jsapi/2.1/commercial/index-docpage/
+        self.apiEnterprise = true
+        
         // By default is taken from view controller name. I.e. 'myMap' for MyMapViewController.
         self.initFileName = 'anotherFile'
     
