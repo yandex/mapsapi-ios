@@ -1,5 +1,6 @@
 (function (global) {
-    var API_URL = 'https://{subdomain}api-maps.yandex.ru/2.1-dev/?lang={lang}&mode={mode}';
+    // var API_URL = 'https://{subdomain}api-maps.yandex.ru/2.1-dev/?lang={lang}&mode={mode}';
+    var API_URL = 'http://node.jsapi.zinchuk.fuji.dev.cloud.maps.yandex.net/init.js?lang=ru_RU&mode=debug&host_config[intHosts][metaApi]=http://meta.maps.yandex.net/&host_config[hosts][mapTiles]=%2F%2Fvec0%25d.maps.yandex.net%2Ftiles%3Fl%3Dmap%26%25c%26%25l&host_config[hosts][apiCoverageService]=https://api-maps.yandex.ru/services/coverage/';
 
     var params = JSON.parse(decodeURIComponent(location.search.match(/[\?&]params=(.+?)(?:&|$)/)[1]));
     
@@ -10,16 +11,22 @@
         document.head.appendChild(script);
     }
 
+    function init () {
+         ymaps.modules.require(['tileCache']);
+    }
+
     function onApiLoad () {
         insertScript('js/mapsapi-round-controls.js');
         insertScript('js/fs.js');
+        insertScript('js/tile-cache.js');
+        init();
         insertScript(params.init_file);
     }
  
     var url = API_URL
             .replace('{subdomain}', params.api_enterprise ? 'enterprise.' : '')
             .replace('{lang}', params.api_lang)
-            .replace('{mode}', params.api_mode)
+            .replace('{mode}', params.api_mode);
 
     insertScript(url, onApiLoad);
 })(window);

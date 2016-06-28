@@ -8,8 +8,7 @@ ymaps.ready(['map.metaOptions']).then(function (ymaps) {
         }, {
             layerTilePositionEngine: 'css3-3d',
             dragInertiaDuration: 'auto',
-            dragInertiaMinDistance: 0,
-                                        
+                            
             layerTileAnimateOpacity: false,
             avoidFractionalZoom: false,
             layerWebglEnabled: false

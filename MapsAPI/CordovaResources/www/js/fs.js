@@ -1,8 +1,10 @@
 ymaps.modules.define('fs', ['vow'], function (provide, vow) {
-    function open (dir, name, params) {
-        if (!dir || !name) {
-            return vow.reject('No source directory or name specified');
+    function open (dir, path, params) {
+        if (!dir || !path) {
+            return vow.reject('No source directory or path specified');
         }
+
+        params || (params = {});
 
         if (typeof resolveLocalFileSystemURL != 'function') {
             return vow.reject('No access to file system');
@@ -10,13 +12,21 @@ ymaps.modules.define('fs', ['vow'], function (provide, vow) {
 
         return new vow.Promise(function (resolve, reject) {
             resolveLocalFileSystemURL(dir, function (sourceDir) {
-                sourceDir.getFile(name, params, resolve, reject);
+                function getFile () {
+                    sourceDir.getFile(path, params, resolve, reject);
+                }
+
+                if (params.createPath) {
+                    createPathRecursive(sourceDir, path.split('/').slice(0, -1), getFile, reject);
+                } else {
+                    getFile();
+                }
             }, reject);
         });
     }
 
-    function create (dir, name, data) {
-        return open(dir, name, { create: true, exclusive: false }).then(function (file) {
+    function create (dir, path, data) {
+        return open(dir, path, { create: true, exclusive: false, createPath: true }).then(function (file) {
             return new vow.Promise(function (resolve, reject) {
                 file.createWriter(function (fileWriter) {
                     if (typeof data == 'string') {
@@ -31,16 +41,16 @@ ymaps.modules.define('fs', ['vow'], function (provide, vow) {
         });
     }
     
-    function info (dir, name) {
-        return open(dir, name, { create: false, exclusive: false }).then(function (file) {
+    function info (dir, path) {
+        return open(dir, path, { create: false, exclusive: false }).then(function (file) {
             return new vow.Promise(function (resolve, reject) {
                 file.file(resolve, reject);
             });
         });
     }
 
-    function read (dir, name, readAs) {
-        return info(dir, name).then(function (fileInfo) {
+    function read (dir, path, readAs) {
+        return info(dir, path).then(function (fileInfo) {
             return new vow.Promise(function (resolve, reject) {
                 var reader = new FileReader();
                 reader.onload = function () { resolve(this.result); };
@@ -55,6 +65,17 @@ ymaps.modules.define('fs', ['vow'], function (provide, vow) {
         });
     }
 
+    function createPathRecursive (dir, path, onSuccess, onFailure) {
+        if (!path.length) {
+            onSuccess();
+            return;
+        }
+
+        dir.getDirectory(path.shift(), { create: true }, function (child) {
+            createPathRecursive(child, path, onSuccess, onFailure);
+        }, onFailure);
+    }
+
     provide({
         open: open,
         create: create,
@@ -66,14 +87,14 @@ ymaps.modules.define('fs', ['vow'], function (provide, vow) {
 ymaps.modules.define('fs.cache', ['fs', 'vow'], function (provide, fs, vow) {
     var CACHE_DIR = cordova.file.cacheDirectory;
 
-    function download (url, name, mimeType) {
+    function download (url, path, mimeType) {
         return new vow.Promise(function (resolve, reject) {
             var xhr = new XMLHttpRequest();
             xhr.open('GET', url, true);
             xhr.responseType = 'blob';
             xhr.onload = function () {
                 if (this.status == 200) {
-                    resolve(fs.create(CACHE_DIR, name, new Blob([this.response], { type: mimeType })));
+                    resolve(fs.create(CACHE_DIR, path, new Blob([this.response], { type: mimeType })));
                 } else {
                     reject('Download status: ' + this.status);
                 }
@@ -83,22 +104,37 @@ ymaps.modules.define('fs.cache', ['fs', 'vow'], function (provide, fs, vow) {
         });
     }
 
-    function fetch (name, url, mimeType, cacheDuration) {
+    function fetchFile (url, mimeType, cacheDuration, path) {
         if (typeof cacheDuration == 'undefined') {
             cacheDuration = Infinity;
         }
 
-        return fs.info(CACHE_DIR, name)
+        if (!path) {
+            path = url.replace(/[^\w]/ig, '_');
+        }
+
+        return fs.info(CACHE_DIR, path)
             .then(function (fileInfo) {
                 return (+new Date() - fileInfo.lastModifiedDate < cacheDuration) ?
-                    fs.open(CACHE_DIR, name) :
-                    download(url, name, mimeType);
+                    fs.open(CACHE_DIR, path) :
+                    download(url, path, mimeType);
             }, function () {
-                return download(url, name, mimeType);
+                return download(url, path, mimeType);
+            });
+    }
+
+    function fetchAndRead (url, mimeType, cacheDuration, path) {
+    }
+
+    function fetchLocalUrl (url, mimeType, cacheDuration, path) {
+        return fetchFile(url, mimeType, cacheDuration, path)
+            .then(function (file) {
+                return file.toURL();
             });
     }
 
     provide({
-        fetch: fetch
-    })
+        fetch: fetchAndRead,
+        fetchLocalUrl: fetchLocalUrl
+    });
 });
