@@ -128,9 +128,7 @@ ymaps.modules.define('fs.cache', ['fs', 'vow'], function (provide, fs, vow) {
 
     function fetchLocalUrl (url, mimeType, cacheDuration, path) {
         return fetchFile(url, mimeType, cacheDuration, path)
-            .then(function (file) {
-                return file.toURL();
-            });
+            .then(function (file) { return file.toURL(); });
     }
 
     provide({
