@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = 'MapsAPI'
   s.version          = '0.1.0'
-  s.summary          = 'Allows to easily add Yandex Maps to your existing iOS project using Yandex.Maps JavaScript API'
-  s.description      = 'Allows to easily add Yandex Maps to your existing iOS project using Yandex.Maps JavaScript API'
+  s.summary          = 'Allows to easily add Yandex.Maps to your existing iOS project using Yandex.Maps JavaScript API'
+  s.description      = 'Allows to easily add Yandex.Maps to your existing iOS project using Yandex.Maps JavaScript API'
   s.homepage         = 'https://github.com/yandex/mapsapi-ios'
   # s.screenshots     = 'https://github.com/raw/yandex/mapsapi-ios/master/docs/iphone5s.png', 'https://github.com/raw/yandex/mapsapi-ios/master/docs/iphone5c.png', 'https://github.com/raw/yandex/mapsapi-ios/master/docs/ipad.png'
   s.license          = { :type => 'MPL', :file => 'LICENSE' }
