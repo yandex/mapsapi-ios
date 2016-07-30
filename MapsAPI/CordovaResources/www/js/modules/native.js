@@ -7,6 +7,8 @@ ymaps.modules.define('native', [
 ], function (provide, metaOptions, tileCache, TypeSelector, ZoomControl, GeolocationControl) {
     metaOptions.set(buildMetaOptions());
 
+    tileCache.setup();
+
     provide({
         controls: buildControls()
     });
