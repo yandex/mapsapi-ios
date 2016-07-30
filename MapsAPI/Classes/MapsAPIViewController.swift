@@ -15,14 +15,16 @@ public class MapsAPIViewController: CDVViewController {
     enum MapsAPIError: ErrorType {
         case JSFileNotFound
     }
-    
-    let apiLang: String = "ru_RU"
-    let apiMode: String = "release"
-    let apiEnterprise: Bool = false
-    
-    lazy var jsFileName: String = {
+
+    public var apiEnterprise: Bool = false
+    public var apiVersion: String = "2.1"
+    public var apiParams = [
+        "lang": "ru_RU",
+        "mode": "release"
+    ]
+    public lazy var jsFileName: String = {
         let controllerName = String(self.dynamicType).stringByReplacingOccurrencesOfString("ViewController", withString: "")
-        
+
         return String(controllerName.characters.prefix(1)).lowercaseString + String(controllerName.characters.dropFirst())
     }()
     
@@ -48,9 +50,9 @@ public class MapsAPIViewController: CDVViewController {
     
     private func getParamsJson() -> String {
         let params = [
-            "api_lang": self.apiLang,
-            "api_mode": self.apiMode,
             "api_enterprise": self.apiEnterprise,
+            "api_version": self.apiVersion,
+            "api_params": self.apiParams,
             "init_file": "../../../" + self.jsFileName + ".js"
         ]
         

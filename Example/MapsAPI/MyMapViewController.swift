@@ -13,5 +13,10 @@ class MyMapViewController: MapsAPIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-}
 
+    override func viewDidLoad() {
+        self.apiParams["mode"] = "debug"
+
+        super.viewDidLoad()
+    }
+}
