@@ -140,10 +140,11 @@ ymaps.modules.define('fs.cache', ['fs', 'vow'], function (provide, fs, vow) {
 ymaps.modules.define('tileCache', [
     'vow', 'util.imageLoader', 'fs.cache'
 ], function (provide, vow, imageLoader, fsCache) {
-    var CACHE_DURATION = 7 * 24 * 60 * 60 * 1e3, // 1 week.
-        RE_TILE_HOST = /vec\d+\.maps\.yandex\.net\//; // TODO ym.env.layers
+    var RE_TILE_HOST = /vec\d+\.maps\.yandex\.net\//; // TODO ym.env.layers
 
-    function setup () {
+    function setup (duration) {
+        duration || (duration = 24 * 60 * 60 * 1e3); // 1 day
+        
         if (typeof imageLoader.proxy != 'object') {
             return;
         }
@@ -154,7 +155,7 @@ ymaps.modules.define('tileCache', [
                 return !!url.match(RE_TILE_HOST);
             },
             load: function (url) {
-                return fsCache.fetchLocalUrl(url, 'image/jpeg', CACHE_DURATION, getPath(url))
+                return fsCache.fetchLocalUrl(url, 'image/jpeg', duration, getPath(url))
                     .fail(function () { return url; });
             }
         });
