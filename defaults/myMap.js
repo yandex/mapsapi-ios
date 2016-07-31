@@ -1,4 +1,4 @@
-ymaps.ready(['native']).then(function (ymaps) {
+  ymaps.ready(['native']).then(function (ymaps) {
 
     var map = new ymaps.Map('map', {
             center: [55.7452, 37.5867],
