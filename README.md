@@ -17,9 +17,9 @@ pod 'MapsAPI'
 
 ## Start instantly
 
-1. Create class `MyMapViewController` inherited from `MapsAPIViewController` and add it to any place you want to put the map.
+1. Create class `MyMapViewController` inherited from `MapsAPIViewController` and add it to any place you want to put the map ([screenshot 1](docs/xcode-1.png)).
 
-2. Copy [myMap.js](defaults/myMap.js) to your target resources and use [JavaScript API](https://tech.yandex.com/maps/jsapi/) to modify it and operate with the map.
+2. Copy [myMap.js](defaults/myMap.js) to your target resources and use [JavaScript API](https://tech.yandex.com/maps/jsapi/) to modify it and operate with the map ([screenshot 2](docs/xcode-2.png)).
 
 ## Example
 
