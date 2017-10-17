@@ -1,3 +1,5 @@
+Attention! This module is no longer supported. You can't run this project in the latest version of XCode.
+
 # MapsAPI
 
 Allows to easily add Yandex.Maps to your existing iOS project using [Yandex.Maps JavaScript API](https://tech.yandex.com/maps/jsapi/).
